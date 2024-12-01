@@ -1,0 +1,32 @@
+
+@startuml
+class Produto {
+    - id: int
+    - nome: string
+    - preco: float
+    + atualizarPreco()
+}
+
+class Pedido {
+    - id: int
+    - data: date
+    - cliente: Cliente
+    + calcularTotal()
+}
+
+class Cliente {
+    - id: int
+    - nome: string
+    - endereco: string
+    + realizarPedido()
+}
+
+class Gerente {
+    - id: int
+    - nome: string
+    + gerarRelatorios()
+}
+
+Produto "1" --> "*" Pedido
+Pedido "*" --> "1" Cliente
+@enduml

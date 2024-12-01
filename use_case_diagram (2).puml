@@ -1,0 +1,11 @@
+
+@startuml
+actor Cliente
+actor Vendedor
+actor Gerente
+
+Cliente --> (Consultar Produtos)
+Vendedor --> (Registrar Pedido)
+Gerente --> (Gerenciar Produtos)
+Gerente --> (Gerar Relatórios)
+@enduml
